@@ -8,7 +8,7 @@ public class SingleSelection{
 		}
 		
 		if(name.equals("David")){
-			System.out.println(. name +" YOU ARE WELCOME");
+			System.out.println(name +" YOU ARE WELCOME");
 		}
 	}
 }

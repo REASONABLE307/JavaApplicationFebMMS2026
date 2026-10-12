@@ -1,0 +1,353 @@
+
+Answers
+
+a) Computers process data under the control of sets of instructions called programs.
+
+b) The key logical units of the computer are the input unit, output unit, memory unit, arithmetic and logic unit (ALU), central processing unit (CPU), and secondary storage unit.
+
+c) The three types of languages are machine language, assembly language, and high-level language.
+
+d) The programs that translate high-level language programs into machine language are called compilers.
+
+e) Android is an operating system for mobile devices based on the Linux kernel and Java.
+
+f) Release software is generally feature complete, (supposedly) bug-free, and ready for use by the community.
+
+g) The Wii Remote, as well as many smartphones, uses an accelerometer, which allows the device to respond to motion.
+
+a) The java command from the JDK executes a Java application.
+
+b) The javac command from the JDK compiles a Java program.
+
+c) A Java source code file must end with the .java file extension.
+
+d) When a Java program is compiled, the file produced by the compiler ends with the .class file extension.
+
+e) The file produced by the Java compiler contains bytecodes that are executed by the Java Virtual Machine (JVM).
+
+1.3;
+
+a) Objects enable the design practice of information hiding — although they may know how to communicate with one another across well-defined interfaces, they normally are not allowed to know how other objects are implemented.
+
+b) Java programmers concentrate on creating classes, which contain fields and the set of methods that manipulate those fields and provide services to clients.
+
+c) The process of analyzing and designing a system from an object-oriented point of view is called object-oriented analysis and design (OOAD).
+
+d) A new class of objects can be created conveniently by inheritance — the new class (called the subclass) starts with the characteristics of an existing class (called the superclass), possibly customizing them and adding unique characteristics of its own.
+
+e) Unified Modeling Language (UML) is a graphical language that allows people who design software systems to use an industry-standard notation to represent them.
+
+f) The size, shape, color and weight of an object are considered attributes of the object’s class.
+
+1.4;
+
+a) The logical unit that receives information from outside the computer for use by the computer is the input unit.
+
+b) The process of instructing the computer to solve a problem is called programming.
+
+c) Assembly language is a type of computer language that uses English-like abbreviations for machine-language instructions.
+
+d) Output unit is a logical unit that sends information which has already been processed by the computer to various devices so that it may be used outside the computer.
+
+e) Memory unit and secondary storage unit are logical units of the computer that retain information.
+
+f) Arithmetic unit is a logical unit of the computer that performs calculations.
+
+g) Logic unit is a logical unit of the computer that makes logical decisions.
+
+h) High-level languages are most convenient to the programmer for writing programs quickly and easily.
+
+i) The only language a computer can directly understand is that computer’s machine language.
+
+j) Control unit is a logical unit of the computer that coordinates the activities of all the other logical units.
+
+1.5;
+
+a) The Java programming language is now used to develop large-scale enterprise applications, enhance the functionality of web servers, provide applications for consumer devices, and serve many other purposes.
+
+b) C initially became widely known as the development language of the UNIX operating system.
+
+c) The Transmission Control Protocol (TCP) ensures that messages, consisting of sequentially numbered pieces called bytes, are properly routed from sender to receiver, arrive intact, and are assembled in the correct order.
+
+d) The C++ programming language was developed by Bjarne Stroustrup in the early 1980s at Bell Laboratories.
+
+1.6;
+
+a) Java programs normally go through five phases: edit, compile, load, verify, and execute.
+
+b) An Integrated Development Environment (IDE) provides many tools that support the software development process, such as editors for writing and editing programs, debuggers for locating logic errors, and many other features.
+
+c) The command java invokes the Java interpreter (Java Virtual Machine), which executes Java programs.
+
+d) A virtual machine is a software application that simulates a computer but hides the underlying operating system and hardware from the programs that interact with it.
+
+e) The class loader takes the .class files containing the program’s bytecodes and transfers them to primary memory.
+
+f) The bytecode verifier examines bytecodes to ensure that they are valid.
+
+1.7;
+
+Java programs go through two main compilation phases:
+
+1. Compilation
+
+The Java compiler (javac) translates the Java source code stored in a .java file into bytecode. The bytecode is saved in a .class file.
+
+2. Execution
+
+The Java Virtual Machine (JVM) loads and executes the bytecode. During this process, the class loader loads the necessary classes, the bytecode verifier checks the bytecode for validity, and the JVM executes the program.
+
+Example:
+
+If the source file is named Hello.java, compile it using:
+
+This produces Hello.class. Run the program using:
+
+The JVM executes the program and displays its output.
+
+1.8 Explain the following terms and concepts using a wristwatch as an example.
+1. Object
+
+A wristwatch is an object because it is a specific item with properties and functions. For example, a particular digital wristwatch is an object.
+
+2. Attributes
+
+Attributes are the characteristics or properties of an object. A wristwatch's attributes include its color, size, weight, brand, display type, and strap material.
+
+3. Behaviors
+
+Behaviors are the actions an object can perform. A wristwatch can display the time, measure elapsed time, and, if it has an alarm, produce an alarm sound.
+
+4. Class
+
+A class is a blueprint for creating objects. For example, the Watch class defines common properties and behaviors that individual wristwatches possess.
+
+5. Inheritance
+
+Inheritance allows a new class to acquire the properties and behaviors of an existing class. For example, an AlarmWatch class can inherit from a Watch class and add an alarm feature.
+
+6. Modeling
+
+Modeling is the process of representing a real-world object or system in a simplified form. A wristwatch model might show its attributes, such as time and date, and behaviors, such as displaying time and setting an alarm.
+
+7. Messages
+
+Messages are communications between objects that request actions or provide information. For example, a user can send a command to a digital watch to set the time or activate an alarm.
+
+8. Encapsulation
+
+Encapsulation combines an object's data and the methods that operate on that data into a single unit. In a wristwatch, the internal mechanisms and the methods controlling them work together as one unit.
+
+9. Interface
+
+An interface is the means through which a user interacts with an object. A wristwatch's buttons, crown, and touchscreen allow users to set the time, change settings, and activate features.
+
+10. Information Hiding
+
+Information hiding means keeping an object's internal implementation details hidden from users. For example, a person can read the time displayed on a wristwatch without knowing how its internal electronic circuits or mechanical gears work.
+
+
+Research: Formulas for Calculating Carbon Footprints
+1. What Is a Carbon Footprint?
+
+A carbon footprint is the total amount of greenhouse gases released into the atmosphere as a result of the activities of an individual, organization, product, or household. It is usually measured in kilograms or tonnes of carbon dioxide equivalent (CO₂e).
+
+Carbon footprints include emissions from activities such as driving vehicles, using electricity, cooking with fossil fuels, air travel, and waste disposal.
+
+2. Formulas for Calculating Carbon Footprints
+
+The general formula for calculating a carbon footprint is:
+
+Carbon Footprint = Activity Data × Emission Factor
+
+Where:
+
+Activity data represents the amount of fuel consumed, electricity used, or distance travelled.
+Emission factor represents the amount of greenhouse gas emitted per unit of activity.
+A. Transportation
+
+For a petrol-powered vehicle:
+
+Carbon Emissions (kg CO₂) = Fuel Consumed (litres) × Emission Factor (kg CO₂/litre)
+
+For example, if a car consumes 100 litres of petrol and the emission factor is approximately 2.31 kg CO₂ per litre:
+
+Carbon emissions = 100 × 2.31
+
+Carbon emissions = 231 kg CO₂
+
+B. Electricity Consumption
+
+The formula for calculating emissions from electricity consumption is:
+
+Carbon Emissions (kg CO₂) = Electricity Used (kWh) × Electricity Emission Factor (kg CO₂/kWh)
+
+For example, if a household consumes 200 kWh of electricity and the emission factor is 0.5 kg CO₂ per kWh:
+
+Carbon emissions = 200 × 0.5
+
+Carbon emissions = 100 kg CO₂
+
+3. Calculating Total Carbon Footprint
+
+An individual's total carbon footprint can be estimated by adding emissions from all relevant activities:
+
+Total Carbon Footprint = Transportation Emissions + Electricity Emissions + Heating and Cooking Emissions + Other Emissions
+
+The result can be expressed in kilograms or tonnes of CO₂e per year.
+
+To convert kilograms to tonnes:
+
+Tonnes of CO₂e = Kilograms of CO₂e ÷ 1,000
+
+4. Factors Considered by Carbon-Footprint Calculators
+
+Web-based carbon-footprint calculators commonly consider:
+
+Home energy: Electricity, natural gas, and other fuels used at home.
+Transportation: Fuel consumption, vehicle type, and distance travelled.
+Air travel: Number and distance of flights taken.
+Waste: The quantity and type of waste generated.
+Lifestyle: Other activities and consumption patterns that contribute to greenhouse gas emissions.
+
+The calculators use these details and appropriate emission factors to estimate an individual's annual carbon footprint.
+
+5. Websites for Further Research
+
+The following websites provide carbon-footprint calculators and related information:
+
+TerraPass: TerraPass Carbon Footprint Calculator
+Carbon Footprint: Carbon Footprint Calculator
+United States Environmental Protection Agency (EPA): EPA Greenhouse Gas Equivalencies Calculator
+Greenhouse Gas Protocol: GHG Protocol
+6. Conclusion
+
+Carbon-footprint calculators estimate the greenhouse gas emissions associated with an individual's daily activities. The basic calculation involves multiplying activity data by the appropriate emission factor and adding the results for different activities.
+
+Understanding these formulas provides a foundation for developing a carbon-footprint calculator using a programming language such as Java. Such a program can collect information about fuel consumption, electricity usage, and transportation, calculate the resulting emissions, and display the user's estimated annual carbon footprint.
+
+Research: Formulas for Calculating Body Mass Index (BMI)
+1. What Is Body Mass Index (BMI)?
+
+Body Mass Index (BMI) is a measure used to estimate whether a person has a healthy body weight relative to their height. It is calculated using a person's weight and height.
+
+BMI is commonly used to screen for weight categories such as underweight, normal weight, overweight, and obesity.
+
+2. Formulas for Calculating BMI
+
+There are two common formulas for calculating BMI.
+
+A. Metric Formula
+
+When weight is measured in kilograms and height in metres:
+
+B. Imperial Formula
+
+When weight is measured in pounds and height in inches:
+Where:
+
+Weight is measured in pounds (lb).
+Height is measured in inches (in).
+
+For adults aged 20 and older, the commonly used BMI categories are:
+
+BMI Range	Weight Category
+Below 18.5	Underweight
+18.5–24.9	Normal weight
+25.0–29.9	Overweight
+30.0 and above	Obesity
+
+These categories are screening guidelines, not a diagnosis of an individual's health. BMI is interpreted differently for children and teenagers.
+
+4. Steps for Calculating BMI
+
+To calculate BMI manually or using a computer program:
+
+Obtain the person's weight.
+Obtain the person's height.
+Convert the measurements to the appropriate units if necessary.
+Square the height.
+Divide the weight by the squared height using the metric formula, or multiply the weight by 703 and divide by the squared height using the imperial formula.
+Display the calculated BMI.
+5. Website for Further Research
+
+The following websites provide information about BMI and BMI calculations:
+
+National Heart, Lung, and Blood Institute (NHLBI): NHLBI BMI Calculator
+Centers for Disease Control and Prevention (CDC): About Adult BMI
+
+Exercise 1.11: Attributes of Hybrid Vehicles
+Introduction
+
+Hybrid vehicles use both a gasoline engine and an electric motor to power the vehicle. They are becoming increasingly popular because they generally consume less fuel and produce fewer emissions than comparable gasoline-powered vehicles.
+
+I researched five popular hybrid vehicles for the 2026 model year: the Toyota Prius, Honda Accord Hybrid, Hyundai Sonata Hybrid, Kia Sportage Hybrid, and Kia Sorento Hybrid. Their hybrid-related attributes include fuel economy, engine type, electric motor power, battery specifications, transmission, and driving modes.
+
+1. Toyota Prius Hybrid (2026)
+
+The Toyota Prius is known for its excellent fuel economy and efficient hybrid system.
+Hybrid-related attributes:
+
+Vehicle type: Hybrid passenger car.
+Engine: 2.0-litre, four-cylinder gasoline engine.
+Hybrid system: Fifth-generation Toyota Hybrid System.
+Combined system power: 194 horsepower for front-wheel-drive models and up to 196 horsepower for all-wheel-drive models.
+Fuel economy: Up to 57 MPG combined for front-wheel-drive models.
+Transmission: Electronically controlled continuously variable transmission (e-CVT).
+Electric motors: Two motor-generators.
+Battery type: Lithium-ion.
+Driving modes: Normal, Eco, Sport, and EV mode.
+Regenerative braking: Yes.
+Drive options: Front-wheel drive and available electronic all-wheel drive.
+Battery capacity: Not specified in the cited standard-hybrid specifications.
+Battery weight: Not specified in the cited specifications.
+
+Source: Toyota Prius official specifications
+
+2. Honda Accord Hybrid (2026)
+
+The Honda Accord Hybrid combines a gasoline engine with an electric motor system to improve fuel efficiency while providing comfortable everyday transportation.
+Hybrid-related attributes:
+
+Vehicle type: Hybrid midsize sedan.
+Engine: Four-cylinder gasoline engine.
+Power source: Gasoline engine and electric motor system.
+Fuel economy:
+Sport: 46 MPG city, 41 MPG highway, 44 MPG combined.
+EX-L: 51 MPG city, 44 MPG highway, 48 MPG combined.
+Sport-L and Touring: 46 MPG city, 41 MPG highway, 44 MPG combined.
+Transmission: Electronic continuously variable transmission system.
+Battery type: Lithium-ion.
+Regenerative braking: Yes.
+Drive type: Front-wheel drive.
+Battery capacity: Not specified in the cited pricing and fuel-economy release.
+Battery voltage: Not specified in that release.
+Battery weight: Not specified in that release.
+
+Source: Honda Accord Hybrid official specifications and EPA ratingsOther Attributes That Can Be Used in a Hybrid-Car Program
+
+If you are preparing to write a Java program that stores and compares hybrid vehicles, you can include the following attributes:
+
+Vehicle attributes
+Vehicle make.
+Vehicle model.
+Model year.
+Vehicle type.
+Engine displacement.
+Number of cylinders.
+Gasoline engine horsepower.
+Electric motor horsepower.
+Total system horsepower.
+Total system torque.
+City fuel economy.
+Highway fuel economy.
+Combined fuel economy.
+Fuel tank capacity.
+Transmission type.
+Drive type (FWD, RWD, or AWD).
+
+Conclusion
+
+The research shows that hybrid vehicles combine gasoline engines, electric motors, and rechargeable batteries to improve fuel efficiency. The five vehicles demonstrate that important hybrid-related attributes include city and highway fuel economy, combined horsepower, battery type, voltage, capacity, weight, transmission, and regenerative braking.
+
+These attributes are useful for comparing hybrid vehicles and provide a foundation for designing a Java program that stores vehicle information, calculates fuel costs, and compares fuel efficiency and environmental performance.
