@@ -1,0 +1,877 @@
+
+ANSWER
+
+a) An opening curly brace { begins the body of every method, and a closing curly brace } ends the body of every method.
+
+b) You can use the if statement to make decisions.
+
+c) // begins an end-of-line comment.
+
+d) Space, tab, and newline are called white space.
+
+e) Keywords are reserved for use by Java.
+
+f) Java applications begin execution at method main.
+
+g) Methods System.out.print(), System.out.println(), and System.out.printf() display information in a command window.
+
+2.2 True or False
+
+a) Comments cause the computer to print the text after the // on the screen when the program executes.
+
+Answer: False. Comments are ignored by the compiler and are not displayed when the program executes.
+
+b) All variables must be given a type when they’re declared.
+
+Answer: True. In Java, variables must have a declared type, such as int, double, or String.
+
+c) Java considers the variables number and NuMbEr to be identical.
+
+Answer: False. Java is case-sensitive, so number and NuMbEr are different variables.
+
+d) The remainder operator (%) can be used only with integer operands.
+
+Answer: False. The remainder operator can be used with both integer and floating-point operands in Java.
+
+e) The arithmetic operators *, /, %, +, and - all have the same level of precedence.
+
+Answer: False. The operators *, /, and % have higher precedence than + and -.
+
+2.3 Write Statements
+
+a) Declare variables c, thisIsAVariable, q76354, and number to be of type int.
+
+int c, thisIsAVariable, q76354, number;
+
+b) Prompt the user to enter an integer.
+
+System.out.print("Enter an integer: ");
+
+c) Input an integer and assign the result to variable value.
+
+value = input.nextInt();
+
+d) Print "This is a Java program" on one line using System.out.println.
+
+System.out.println("This is a Java program");
+
+e) Print "This is a Java program" on two lines using System.out.printf and two %s format specifiers. The first line should end with Java.
+
+System.out.printf("%s%n%s%n", "This is a Java", "program");
+
+Output:
+
+This is a Java
+program
+
+f) If variable number is not equal to 7, display the specified message.
+
+if (number != 7)
+    System.out.println("The variable number is not equal to 7");
+2.4 Identify and Correct the Errors
+a) Incorrect statement
+if (c < 7); System.out.println("c is less than 7");
+
+Error: The semicolon (;) immediately after the if condition terminates the if statement.
+
+Correct statement:
+
+if (c < 7)
+    System.out.println("c is less than 7");
+b) Incorrect statement
+if (c => 7) System.out.println("c is equal to or greater than 7");
+
+Error: The operator => is invalid in Java. The correct operator is >=.
+
+Correct statement:
+
+if (c >= 7)
+    System.out.println("c is equal to or greater than 7");
+
+
+2.5 Write Declarations, Statements, or Comments
+
+Complete Java Program for Exercise 2.5
+
+The following program combines all the statements from Exercise 2.5 into one working Java program.
+
+import java.util.Scanner;
+
+public class Product {
+    public static void main(String[] args) {
+
+        // This program calculates the product of three integers.
+
+        Scanner input = new Scanner(System.in);
+
+        int x, y, z, result;
+
+        System.out.print("Enter first integer: ");
+        x = input.nextInt();
+
+        System.out.print("Enter second integer: ");
+        y = input.nextInt();
+
+        System.out.print("Enter third integer: ");
+        z = input.nextInt();
+
+        result = x * y * z;
+
+        System.out.printf("Product is %d%n", result);
+
+        input.close();
+    }
+}
+2.7 Fill in the Blanks
+
+a) Comments are used to document a program and improve its readability.
+
+b) A decision can be made in a Java program with an if statement.
+
+c) Calculations are normally performed by assignment statements.
+
+d) The arithmetic operators with the same precedence as multiplication are division (/) and remainder (%).
+
+e) When parentheses in an arithmetic expression are nested, the innermost set of parentheses is evaluated first.
+
+f) A location in the computer's memory that may contain different values at various times throughout the execution of a program is called a variable.
+
+2.8 Write Java Statements
+
+a) Display "Enter an integer: ", leaving the cursor on the same line.
+
+System.out.print("Enter an integer: ");
+
+b) Assign the product of variables b and c to variable a.
+
+a = b * c;
+
+c) Use a comment to state that a program performs a sample payroll calculation.
+
+// This program performs a sample payroll calculation.
+
+2.9 True or False
+
+a) Java operators are evaluated from left to right.
+
+Answer: False. Operators are evaluated according to precedence and associativity. For operators with the same precedence, most arithmetic operators are evaluated from left to right.
+
+b) The following are all valid variable names: _under_bar_, m928134, t5, j7, her_sales$, his_$account_total, a, b$, c, z and z2.
+
+Answer: True. All these names are valid Java identifiers, although identifiers consisting of only underscores are not permitted in modern Java. Since _under_bar_ contains other characters, it is valid.
+
+c) A valid Java arithmetic expression with no parentheses is evaluated from left to right.
+
+Answer: False. Java evaluates expressions according to operator precedence first. Operators with the same precedence are generally evaluated from left to right.
+
+d) The following are all invalid variable names: 3g, 87, 67h2, h22 and 2h.
+
+Answer: False. h22 is a valid variable name because it begins with a letter. The others are invalid because they begin with digits.
+
+2.14 Display Numbers 1 to 4 on the Same Line
+a) Using one System.out.println statement
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.println("1 2 3 4");
+    }
+}
+b) Using four System.out.print statements
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("1 ");
+        System.out.print("2 ");
+        System.out.print("3 ");
+        System.out.print("4");
+    }
+}
+c) Using one System.out.printf statement
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.printf("%d %d %d %d%n", 1, 2, 3, 4);
+    }
+}
+
+Output for all three programs:
+
+1 2 3 4
+2.15 Arithmetic: Sum, Product, Difference and Quotient
+
+Write a program that accepts two integers and calculates their sum, product, difference and quotient.
+
+import java.util.Scanner;
+
+public class Arithmetic {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number1, number2;
+
+        System.out.print("Enter first integer: ");
+        number1 = input.nextInt();
+
+        System.out.print("Enter second integer: ");
+        number2 = input.nextInt();
+
+        System.out.printf("Sum is %d%n", number1 + number2);
+        System.out.printf("Product is %d%n", number1 * number2);
+        System.out.printf("Difference is %d%n", number1 - number2);
+
+        if (number2 != 0) {
+            System.out.printf("Quotient is %d%n", number1 / number2);
+        } else {
+            System.out.println("Cannot divide by zero.");
+        }
+
+        input.close();
+    }
+}
+
+Example output:
+
+Enter first integer: 10
+Enter second integer: 2
+Sum is 12
+Product is 20
+Difference is 8
+Quotient is 5
+
+Note: Because both numbers are integers, Java performs integer division. For example, 7 / 2 produces 3, not 3.5.
+
+2.16 Comparing Integers
+import java.util.Scanner;
+
+public class CompareIntegers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number1, number2;
+
+        System.out.print("Enter first integer: ");
+        number1 = input.nextInt();
+
+        System.out.print("Enter second integer: ");
+        number2 = input.nextInt();
+
+        if (number1 > number2) {
+            System.out.println(number1 + " is larger");
+        }
+
+        if (number2 > number1) {
+            System.out.println(number2 + " is larger");
+        }
+
+        if (number1 == number2) {
+            System.out.println("These numbers are equal");
+        }
+
+        input.close();
+    }
+}
+
+Example output:
+
+Enter first integer: 8
+Enter second integer: 5
+8 is larger
+2.17 Arithmetic, Smallest and Largest
+
+This program inputs three integers and displays their sum, integer average, product, smallest and largest values.
+
+import java.util.Scanner;
+
+public class NumberCalculations {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int a, b, c;
+        int sum, average, product;
+        int smallest, largest;
+
+        System.out.print("Enter first integer: ");
+        a = input.nextInt();
+
+        System.out.print("Enter second integer: ");
+        b = input.nextInt();
+
+        System.out.print("Enter third integer: ");
+        c = input.nextInt();
+
+        sum = a + b + c;
+        average = sum / 3;
+        product = a * b * c;
+
+        smallest = a;
+        if (b < smallest) {
+            smallest = b;
+        }
+        if (c < smallest) {
+            smallest = c;
+        }
+
+        largest = a;
+        if (b > largest) {
+            largest = b;
+        }
+        if (c > largest) {
+            largest = c;
+        }
+
+        System.out.printf("Sum is %d%n", sum);
+        System.out.printf("Average is %d%n", average);
+        System.out.printf("Product is %d%n", product);
+        System.out.printf("Smallest is %d%n", smallest);
+        System.out.printf("Largest is %d%n", largest);
+
+        input.close();
+    }
+}
+2.18 Displaying Shapes with Asterisks
+
+The exercise's original diagram is missing from the supplied text, so the following program displays a box, an oval, an arrow and a diamond in a simple asterisk pattern.
+
+public class Shapes {
+    public static void main(String[] args) {
+
+        System.out.println("Box:");
+        System.out.println("********");
+        System.out.println("*      *");
+        System.out.println("*      *");
+        System.out.println("*      *");
+        System.out.println("********");
+
+        System.out.println();
+
+        System.out.println("Oval:");
+        System.out.println("   ***   ");
+        System.out.println(" *     * ");
+        System.out.println("*       *");
+        System.out.println("*       *");
+        System.out.println(" *     * ");
+        System.out.println("   ***   ");
+
+        System.out.println();
+
+        System.out.println("Arrow:");
+        System.out.println("   *");
+        System.out.println("  ***");
+        System.out.println(" *****");
+        System.out.println("   *");
+        System.out.println("   *");
+        System.out.println("   *");
+        System.out.println("   *");
+
+        System.out.println();
+
+        System.out.println("Diamond:");
+        System.out.println("   *");
+        System.out.println("  ***");
+        System.out.println(" *****");
+        System.out.println("*******");
+        System.out.println(" *****");
+        System.out.println("  ***");
+        System.out.println("   *");
+    }
+}
+2.19 What Does the Following Code Print?
+System.out.printf("*%n**%n***%n****%n*****%n");
+
+Output:
+
+*
+**
+***
+****
+*****
+2.21 What Does the Following Code Print?
+System.out.print("*");
+System.out.print("***");
+System.out.print("*****");
+System.out.print("****");
+System.out.println("**");
+
+Output:
+
+***************
+
+Explanation: The print statements display their text on the same line. The final println displays ** and then moves to the next line.
+
+2.22 What Does the Following Code Print?
+System.out.print("*");
+System.out.println("***");
+System.out.println("*****");
+System.out.print("****");
+System.out.println("**");
+
+Output:
+
+****
+*****
+******
+
+Explanation:
+
+The first print displays *.
+The next println adds *** to the same line, producing ****.
+The next println displays ***** on a new line.
+The final two statements display **** and ** together on the same line, producing ******.
+2.23 What Does the Following Code Print?
+System.out.printf("%s%n%s%n%s%n", "*", "***", "*****");
+
+Output:
+
+*
+***
+*****
+
+Explanation: %s represents a string, while %n starts a new line.
+
+2.24 Largest and Smallest Integers
+
+Write a program that reads five integers and prints the largest and smallest.
+
+import java.util.Scanner;
+
+public class LargestSmallest {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number;
+        int largest, smallest;
+
+        System.out.print("Enter integer 1: ");
+        number = input.nextInt();
+
+        largest = number;
+        smallest = number;
+
+        System.out.print("Enter integer 2: ");
+        number = input.nextInt();
+
+        if (number > largest) {
+            largest = number;
+        }
+        if (number < smallest) {
+            smallest = number;
+        }
+
+        System.out.print("Enter integer 3: ");
+        number = input.nextInt();
+
+        if (number > largest) {
+            largest = number;
+        }
+        if (number < smallest) {
+            smallest = number;
+        }
+
+        System.out.print("Enter integer 4: ");
+        number = input.nextInt();
+
+        if (number > largest) {
+            largest = number;
+        }
+        if (number < smallest) {
+            smallest = number;
+        }
+
+        System.out.print("Enter integer 5: ");
+        number = input.nextInt();
+
+        if (number > largest) {
+            largest = number;
+        }
+        if (number < smallest) {
+            smallest = number;
+        }
+
+        System.out.printf("Largest integer is %d%n", largest);
+        System.out.printf("Smallest integer is %d%n", smallest);
+
+        input.close();
+    }
+}
+2.25 Odd or Even
+
+A number is even if its remainder when divided by 2 is zero. Otherwise, it is odd.
+
+import java.util.Scanner;
+
+public class OddEven {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number;
+
+        System.out.print("Enter an integer: ");
+        number = input.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is even");
+        } else {
+            System.out.println(number + " is odd");
+        }
+
+        input.close();
+    }
+}
+
+Example output:
+
+Enter an integer: 7
+7 is odd
+2.26 Multiples
+
+This program determines whether the first integer is a multiple of the second.
+
+import java.util.Scanner;
+
+public class Multiples {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number1, number2;
+
+        System.out.print("Enter first integer: ");
+        number1 = input.nextInt();
+
+        System.out.print("Enter second integer: ");
+        number2 = input.nextInt();
+
+        if (number2 == 0) {
+            System.out.println("Cannot determine multiples using zero as the divisor.");
+        } else if (number1 % number2 == 0) {
+            System.out.println(number1 + " is a multiple of " + number2);
+        } else {
+            System.out.println(number1 + " is not a multiple of " + number2);
+        }
+
+        input.close();
+    }
+}
+
+The following program displays a checkerboard pattern using alternating spaces and asterisks.
+
+public class Checkerboard {
+    public static void main(String[] args) {
+        System.out.println("* * * * * * * *");
+        System.out.println(" * * * * * * * *");
+        System.out.println("* * * * * * * *");
+        System.out.println(" * * * * * * * *");
+        System.out.println("* * * * * * * *");
+        System.out.println(" * * * * * * * *");
+        System.out.println("* * * * * * * *");
+        System.out.println(" * * * * * * * *");
+    }
+}
+.28 Diameter, Circumference and Area of a Circle
+
+The formulas are:
+
+Diameter = \(2r\)
+Circumference = \(2\pi r\)
+Area = \(\pi r^2\)
+
+The program uses 3.14159 as the value of π and prints the calculations directly in printf statements.
+
+import java.util.Scanner;
+
+public class CircleCalculations {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int radius;
+
+        System.out.print("Enter the radius of the circle: ");
+        radius = input.nextInt();
+
+        System.out.printf("Diameter is %d%n", 2 * radius);
+
+        System.out.printf(
+            "Circumference is %f%n",
+            2 * 3.14159 * radius
+        );
+
+        System.out.printf(
+            "Area is %f%n",
+            3.14159 * radius * radius
+        );
+
+        input.close();
+    }
+}
+2.30 Separating the Digits in an Integer
+Question
+
+Write a Java application that inputs a five-digit number and separates its digits with three spaces.
+
+Solution
+import java.util.Scanner;
+
+public class SeparateDigits {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number;
+
+        System.out.print("Enter a five-digit number: ");
+        number = input.nextInt();
+
+        System.out.printf("%d   ", number / 10000);
+        System.out.printf("%d   ", (number % 10000) / 1000);
+        System.out.printf("%d   ", (number % 1000) / 100);
+        System.out.printf("%d   ", (number % 100) / 10);
+        System.out.printf("%d%n", number % 10);
+
+        input.close();
+    }
+}
+.31 Table of Squares and Cubes
+Question
+
+Write an application that calculates the squares and cubes of numbers from 0 to 10 and displays the results in a table.
+
+Solution
+public class SquaresAndCubes {
+    public static void main(String[] args) {
+
+        System.out.printf("%-10s%-10s%-10s%n",
+                          "Number", "Square", "Cube");
+
+        System.out.println("--------------------------------");
+
+        System.out.printf("%-10d%-10d%-10d%n", 0, 0 * 0, 0 * 0 * 0);
+        System.out.printf("%-10d%-10d%-10d%n", 1, 1 * 1, 1 * 1 * 1);
+        System.out.printf("%-10d%-10d%-10d%n", 2, 2 * 2, 2 * 2 * 2);
+        System.out.printf("%-10d%-10d%-10d%n", 3, 3 * 3, 3 * 3 * 3);
+        System.out.printf("%-10d%-10d%-10d%n", 4, 4 * 4, 4 * 4 * 4);
+        System.out.printf("%-10d%-10d%-10d%n", 5, 5 * 5, 5 * 5 * 5);
+        System.out.printf("%-10d%-10d%-10d%n", 6, 6 * 6, 6 * 6 * 6);
+        System.out.printf("%-10d%-10d%-10d%n", 7, 7 * 7, 7 * 7 * 7);
+        System.out.printf("%-10d%-10d%-10d%n", 8, 8 * 8, 8 * 8 * 8);
+        System.out.printf("%-10d%-10d%-10d%n", 9, 9 * 9, 9 * 9 * 9);
+        System.out.printf("%-10d%-10d%-10d%n", 10, 10 * 10, 10 * 10 * 10);
+    }
+}
+.32 Negative, Positive and Zero Values
+Question
+
+Write a program that inputs five numbers and counts how many are negative, positive, or zero.
+
+Solution
+import java.util.Scanner;
+
+public class CountNumbers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int number;
+        int positive = 0;
+        int negative = 0;
+        int zeros = 0;
+
+        System.out.print("Enter first number: ");
+        number = input.nextInt();
+
+        if (number > 0) {
+            positive++;
+        } else if (number < 0) {
+            negative++;
+        } else {
+            zeros++;
+        }
+
+        System.out.print("Enter second number: ");
+        number = input.nextInt();
+
+        if (number > 0) {
+            positive++;
+        } else if (number < 0) {
+            negative++;
+        } else {
+            zeros++;
+        }
+
+        System.out.print("Enter third number: ");
+        number = input.nextInt();
+
+        if (number > 0) {
+            positive++;
+        } else if (number < 0) {
+            negative++;
+        } else {
+            zeros++;
+        }
+
+        System.out.print("Enter fourth number: ");
+        number = input.nextInt();
+
+        if (number > 0) {
+            positive++;
+        } else if (number < 0) {
+            negative++;
+        } else {
+            zeros++;
+        }
+
+        System.out.print("Enter fifth number: ");
+        number = input.nextInt();
+
+        if (number > 0) {
+            positive++;
+        } else if (number < 0) {
+            negative++;
+        } else {
+            zeros++;
+        }
+
+        System.out.printf("Positive numbers: %d%n", positive);
+        System.out.printf("Negative numbers: %d%n", negative);
+        System.out.printf("Zeros: %d%n", zeros);
+
+        input.close();
+    }
+}
+.33 Body Mass Index (BMI) Calculator
+Question
+
+Create a BMI calculator that reads a person's weight and height, calculates BMI, and displays the BMI categories.
+Solution
+
+Because this chapter focuses on integers, the following program uses int variables for the calculations.
+
+import java.util.Scanner;
+
+public class BMICalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int weight;
+        int height;
+        int bmi;
+
+        System.out.print("Enter weight in pounds: ");
+        weight = input.nextInt();
+
+        System.out.print("Enter height in inches: ");
+        height = input.nextInt();
+
+        bmi = weight * 703 / (height * height);
+
+        System.out.printf("Your BMI is %d%n", bmi);
+
+        System.out.println("\nBMI VALUES");
+        System.out.println("Underweight: less than 18.5");
+        System.out.println("Normal:      18.5 - 24.9");
+        System.out.println("Overweight:  25 - 29.9");
+        System.out.println("Obesity:     30 or greater");
+
+        input.close();
+    }
+}
+
+
+2.34 World Population Growth Calculator
+Question
+
+Determine the current world population and annual growth rate, then write a program that estimates the population after one, two, three, four, and five years.
+
+The population changes each year according to the assumed growth rate.
+Solution
+import java.util.Scanner;
+
+public class PopulationGrowth {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double population;
+        double growthRate;
+
+        System.out.print("Enter current world population: ");
+        population = input.nextDouble();
+
+        System.out.print("Enter annual growth rate (%): ");
+        growthRate = input.nextDouble();
+
+        growthRate = growthRate / 100;
+
+        System.out.printf("Population after 1 year: %.0f%n",
+                          population * (1 + growthRate));
+
+        System.out.printf("Population after 2 years: %.0f%n",
+                          population * (1 + growthRate) * (1 + growthRate));
+
+        System.out.printf("Population after 3 years: %.0f%n",
+                          population * (1 + growthRate) * (1 + growthRate)
+                          * (1 + growthRate));
+
+        System.out.printf("Population after 4 years: %.0f%n",
+                          population * (1 + growthRate) * (1 + growthRate)
+                          * (1 + growthRate) * (1 + growthRate));
+
+        System.out.printf("Population after 5 years: %.0f%n",
+                          population * (1 + growthRate) * (1 + growthRate)
+                          * (1 + growthRate) * (1 + growthRate)
+                          * (1 + growthRate));
+
+        input.close();
+    }
+}
+2.35 Car-Pool Savings Calculator
+Question
+
+Write a program that calculates the daily cost of driving to work using:
+
+Total miles driven per day.
+Cost per gallon of gasoline.
+Average miles per gallon.
+Daily parking fees.
+Daily tolls.
+
+Solution
+import java.util.Scanner;
+
+public class CarPoolSavings {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double miles;
+        double pricePerGallon;
+        double milesPerGallon;
+        double parking;
+        double tolls;
+        double fuelCost;
+        double totalCost;
+
+        System.out.print("Enter total miles driven per day: ");
+        miles = input.nextDouble();
+
+        System.out.print("Enter cost per gallon of gasoline: ");
+        pricePerGallon = input.nextDouble();
+
+        System.out.print("Enter average miles per gallon: ");
+        milesPerGallon = input.nextDouble();
+
+        System.out.print("Enter parking fees per day: ");
+        parking = input.nextDouble();
+
+        System.out.print("Enter tolls per day: ");
+        tolls = input.nextDouble();
+
+        if (milesPerGallon <= 0) {
+            System.out.println("Miles per gallon must be greater than zero.");
+        } else {
+            fuelCost = (miles / milesPerGallon) * pricePerGallon;
+
+            totalCost = fuelCost + parking + tolls;
+
+            System.out.printf("Daily fuel cost: %.2f%n", fuelCost);
+            System.out.printf("Total daily driving cost: %.2f%n", totalCost);
+        }
+
+        input.close();
+    }
+}
+
+
+
+
