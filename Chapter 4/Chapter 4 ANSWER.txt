@@ -1,0 +1,305 @@
+Exercise 1: Find the Errors
+a)
+
+Correction:
+
+i = 1;
+while (i <= 10) {
+    ++i;
+}
+b)
+
+Correction:
+
+for (k = 0.1; k <= 1.0; k += 0.1)
+    System.out.println(k);
+
+Use a tolerance comparison or an integer counter to avoid floating-point comparison errors.
+
+c)
+
+Correction:
+
+switch (n) {
+    case 1:
+        System.out.println("The number is 1");
+        break;
+    case 2:
+        System.out.println("The number is 2");
+        break;
+    default:
+        System.out.println("The number is not 1 or 2");
+        break;
+}
+d)
+
+Correction:
+
+n = 1;
+while (n <= 10)
+    System.out.println(n++);
+Exercise 2
+4.5 Four Basic Elements of Counter-Controlled Repetition
+Initialization: Initializes the counter variable.
+Condition: Tests whether the loop should continue.
+Increment or decrement: Updates the counter.
+Termination: Ends the loop when the condition becomes false.
+4.6 Compare and Contrast while and for
+
+Similarities:
+
+Both are repetition statements.
+Both execute statements repeatedly while a condition is true.
+Both can be used for counter-controlled repetition.
+
+Differences:
+
+The while loop places initialization, condition, and counter updates separately.
+The for loop places initialization, condition, and update in its header.
+The while loop is suitable when the number of repetitions is not known in advance; the for loop is convenient when it is known.
+4.7 Situation Where do...while Is More Appropriate
+
+A do...while loop is appropriate for a menu-driven program that must display a menu at least once before checking the user's choice.
+
+4.8 Compare and Contrast break and continue
+break: Immediately terminates the loop or switch statement.
+continue: Skips the remaining statements in the current loop iteration and proceeds to the next iteration.
+4.9 Find and Correct the Errors
+a)
+for (i = 100; i >= 1; i--)
+    System.out.println(i);
+b)
+switch (value % 2) {
+    case 0:
+        System.out.println("Even integer");
+        break;
+    case 1:
+    case -1:
+        System.out.println("Odd integer");
+        break;
+}
+c)
+for (i = 19; i >= 1; i -= 2)
+    System.out.println(i);
+d)
+counter = 2;
+do {
+    System.out.println(counter);
+    counter += 2;
+} while (counter <= 100);
+4.10 What Does the Program Do?
+
+The program prints five @ characters on each line for 10 lines, producing a rectangular pattern of 50 @ characters.
+
+4.11 Find the Smallest Value
+import java.util.Scanner;
+
+public class SmallestValue {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the number of integers: ");
+        int count = input.nextInt();
+
+        System.out.print("Enter an integer: ");
+        int smallest = input.nextInt();
+
+        for (int i = 2; i <= count; i++) {
+            System.out.print("Enter an integer: ");
+            int number = input.nextInt();
+
+            if (number < smallest)
+                smallest = number;
+        }
+
+        System.out.println("Smallest value: " + smallest);
+
+        input.close();
+    }
+}
+4.12 Calculating the Product of Odd Integers
+public class OddProduct {
+    public static void main(String[] args) {
+        long product = 1;
+
+        for (int i = 1; i <= 15; i += 2)
+            product *= i;
+
+        System.out.println("Product: " + product);
+    }
+}
+4.13 Factorials
+public class Factorials {
+    public static void main(String[] args) {
+        long factorial = 1;
+
+        System.out.println("Number\tFactorial");
+
+        for (int i = 1; i <= 20; i++) {
+            factorial *= i;
+            System.out.println(i + "\t" + factorial);
+        }
+    }
+}
+
+Difficulty with calculating 100!: The value of 100! exceeds the maximum value that the Java long data type can store, causing integer overflow.
+
+4.14 Modified Compound-Interest Program
+public class CompoundInterest {
+    public static void main(String[] args) {
+        double principal = 1000.0;
+
+        System.out.printf("%s%20s%n", "Year", "Amount");
+
+        for (int rate = 5; rate <= 10; rate++) {
+            System.out.println("\nInterest rate: " + rate + "%");
+
+            for (int year = 1; year <= 10; year++) {
+                double amount = principal *
+                    Math.pow(1.0 + rate / 100.0, year);
+
+                System.out.printf("%4d%,20.2f%n", year, amount);
+            }
+        }
+    }
+}
+
+
+4.30 Global Warming Facts Quiz
+import java.util.Scanner;
+
+public class GlobalWarmingQuiz {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int answer;
+        int score = 0;
+
+        System.out.println("GLOBAL WARMING FACTS QUIZ");
+
+        System.out.println("\n1. What is the main cause of recent global warming?");
+        System.out.println("1. Changes in Earth's orbit");
+        System.out.println("2. Human activities that increase greenhouse gases");
+        System.out.println("3. Changes in ocean currents alone");
+        System.out.println("4. Increased volcanic activity alone");
+        answer = input.nextInt();
+        if (answer == 2) score++;
+
+        System.out.println("\n2. Which gas contributes significantly to human-caused global warming?");
+        System.out.println("1. Oxygen");
+        System.out.println("2. Helium");
+        System.out.println("3. Carbon dioxide");
+        System.out.println("4. Neon");
+        answer = input.nextInt();
+        if (answer == 3) score++;
+
+        System.out.println("\n3. Which factor contributes to uncertainty in climate projections?");
+        System.out.println("1. Future human emissions");
+        System.out.println("2. Natural climate variability");
+        System.out.println("3. Climate model limitations");
+        System.out.println("4. All of the above");
+        answer = input.nextInt();
+        if (answer == 4) score++;
+
+        System.out.println("\n4. What is a major source of evidence for global warming?");
+        System.out.println("1. Long-term temperature records");
+        System.out.println("2. A single day's weather");
+        System.out.println("3. One unusually cold winter");
+        System.out.println("4. A single local storm");
+        answer = input.nextInt();
+        if (answer == 1) score++;
+
+        System.out.println("\n5. Which statement best describes scientific disagreement about climate change?");
+        System.out.println("1. Scientists agree that climate never changes");
+        System.out.println("2. No evidence of warming exists");
+        System.out.println("3. There is debate about some details, impacts, and projections");
+        System.out.println("4. Scientists have no climate models");
+        answer = input.nextInt();
+        if (answer == 3) score++;
+
+        System.out.println("\nYour score: " + score + " out of 5");
+
+        if (score == 5)
+            System.out.println("Excellent");
+        else if (score == 4)
+            System.out.println("Very good");
+        else
+            System.out.println("Time to brush up on your knowledge of global warming");
+
+        System.out.println("\nSources:");
+        System.out.println("1. https://science.nasa.gov/climate-change/");
+        System.out.println("2. https://www.ipcc.ch/");
+        System.out.println("3. https://www.noaa.gov/climate");
+
+        input.close();
+    }
+}
+4.31 Tax Plan Alternatives — The FairTax
+import java.util.Scanner;
+
+public class FairTax {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double housing, food, clothing, transportation;
+        double education, healthcare, vacations, other;
+        double totalExpenses, fairTax;
+
+        System.out.print("Enter housing expenses: ");
+        housing = input.nextDouble();
+
+        System.out.print("Enter food expenses: ");
+        food = input.nextDouble();
+
+        System.out.print("Enter clothing expenses: ");
+        clothing = input.nextDouble();
+
+        System.out.print("Enter transportation expenses: ");
+        transportation = input.nextDouble();
+
+        System.out.print("Enter education expenses: ");
+        education = input.nextDouble();
+
+        System.out.print("Enter healthcare expenses: ");
+        healthcare = input.nextDouble();
+
+        System.out.print("Enter vacation expenses: ");
+        vacations = input.nextDouble();
+
+        System.out.print("Enter other expenses: ");
+        other = input.nextDouble();
+
+        totalExpenses = housing + food + clothing + transportation
+                + education + healthcare + vacations + other;
+
+        fairTax = totalExpenses * 0.23;
+
+        System.out.printf("Total expenses: $%.2f%n", totalExpenses);
+        System.out.printf("Estimated FairTax (23%%): $%.2f%n", fairTax);
+
+        input.close();
+    }
+}
+4.32 Facebook User Base Growth
+public class FacebookGrowth {
+    public static void main(String[] args) {
+        double users = 1.0;
+        int months = 0;
+
+        while (users < 1.5) {
+            users *= 1.04;
+            months++;
+        }
+
+        System.out.println("Months to reach 1.5 billion users: " + months);
+
+        users = 1.0;
+        months = 0;
+
+        while (users < 2.0) {
+            users *= 1.04;
+            months++;
+        }
+
+        System.out.println("Months to reach 2 billion users: " + months);
+    }
+}

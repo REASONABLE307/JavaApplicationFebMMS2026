@@ -1,0 +1,417 @@
+3.10 Compare and contrast the if single-selection statement and the while repetition statement. How are these two statements similar? How are they different?
+
+Similarities:
+
+Both are control statements used to control the flow of a program.
+Both use a condition that evaluates to either true or false.
+Both can execute a block of code depending on a condition.
+
+Differences:
+
+The if statement executes its block of code only once if the condition is true.
+The while statement repeatedly executes its block of code as long as the condition remains true.
+The if statement does not repeat the execution of its block, while the while statement performs repetition.
+3.11 Explain what happens when a Java program attempts to divide one integer by another. What happens to the fractional part of the calculation? How can you avoid that outcome?
+
+When one integer is divided by another integer in Java, the result is an integer. The fractional part of the result is discarded; it is not rounded.
+
+3.12 Describe the two ways in which control statements can be combined.
+
+Control statements can be combined in two ways:
+
+Control-statement stacking: Placing control statements one after another in a sequence.
+Control-statement nesting: Placing one control statement inside another control statement.
+
+Example of nesting:
+
+if (age >= 18) {
+    if (age <= 60) {
+        System.out.println("Eligible");
+    }
+}
+
+Here, one if statement is nested inside another if statement.
+
+3.13 What type of repetition would be appropriate for calculating the sum of the first 100 positive integers? What type would be appropriate for calculating the sum of an arbitrary number of positive integers? Briefly describe how each of these tasks could be performed.
+
+(a) Sum of the first 100 positive integers
+
+A counter-controlled repetition is appropriate because the number of repetitions is known in advance. A for loop can be used to add the numbers from 1 to 100.
+
+Example:
+
+int sum = 0;
+
+for (int i = 1; i <= 100; i++) {
+    sum += i;
+}
+
+System.out.println(sum);
+
+Output:
+
+5050
+
+(b) Sum of an arbitrary number of positive integers
+
+A sentinel-controlled repetition is appropriate when the number of integers is not known in advance. The program can continue accepting numbers until the user enters a special value, called a sentinel, to indicate that input should stop.
+
+For example, the sentinel could be -1, provided negative numbers are not valid inputs.
+
+3.14 What is the difference between preincrementing and postincrementing a variable?
+
+Preincrement (++x): Increments the variable by 1 before its value is used in an expression.
+
+Postincrement (x++): Uses the variable's current value in the expression before incrementing it by 1.
+
+Example:
+
+int x = 5;
+int a = ++x;
+
+Here, x becomes 6, and a is assigned 6.
+
+int y = 5;
+int b = y++;
+
+Here, b is assigned 5, and then y becomes 6.
+
+In summary: Preincrement increments before the value is used, while postincrement increments after the current value is used.
+
+3.15 Identify and correct the errors in each of the following pieces of code.
+(a) Original code
+if (age >= 65);
+System.out.println("Age is greater than or equal to 65");
+else System.out.println("Age is less than 65);
+
+Errors:
+
+There is an unnecessary semicolon (;) after the if condition.
+The second println statement has a missing closing quotation mark.
+
+Corrected code:
+
+if (age >= 65)
+    System.out.println("Age is greater than or equal to 65");
+else
+    System.out.println("Age is less than 65");
+(b) Original code
+int x = 1, total;
+while (x <= 10) {
+    total += x;
+    ++x;
+}
+
+Error:
+
+The variable total is not initialized before it is used.
+
+Corrected code:
+
+int x = 1, total = 0;
+
+while (x <= 10) {
+    total += x;
+    ++x;
+}
+(c) Original code
+while (x <= 100)
+
+total += x;
+++x;
+
+Error:
+
+The loop body is missing braces. Without braces, only total += x; belongs to the loop, so x is never incremented inside the loop. If x <= 100 is initially true, the loop may continue indefinitely.
+
+Corrected code:
+
+while (x <= 100) {
+    total += x;
+    ++x;
+}
+
+Note: The variables x and total must be declared and initialized appropriately before this loop.
+
+(d) Original code
+while (y > 0) {
+    System.out.println(y);
+    ++y;
+}
+
+Error:
+
+The variable y is incremented instead of decremented. If y starts with a positive value, the condition y > 0 remains true, causing an infinite loop.
+
+Corrected code:
+
+while (y > 0) {
+    System.out.println(y);
+    --y;
+}
+
+Note: The variable y must be initialized to a positive integer before the loop.
+
+3.17 Gas Mileage
+
+Question: Write a Java program that inputs miles driven and gallons used for each trip, calculates miles per gallon for each trip, and displays the combined miles per gallon for all trips. Use Scanner and sentinel-controlled repetition.
+
+Java Program
+Exercise 3.17 – Gas Mileage
+import java.util.Scanner;
+
+public class GasMileage {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int miles, gallons;
+        int totalMiles = 0;
+        int totalGallons = 0;
+
+        System.out.print("Enter miles driven (-1 to quit): ");
+        miles = input.nextInt();
+
+        while (miles != -1) {
+            System.out.print("Enter gallons used: ");
+            gallons = input.nextInt();
+
+            if (gallons <= 0) {
+                System.out.println("Gallons must be greater than zero.");
+            } else {
+                double mpg = (double) miles / gallons;
+
+                System.out.printf("Miles per gallon: %.2f%n", mpg);
+
+                totalMiles += miles;
+                totalGallons += gallons;
+
+                System.out.printf("Combined miles per gallon: %.2f%n",
+                        (double) totalMiles / totalGallons);
+            }
+
+            System.out.print("Enter miles driven (-1 to quit): ");
+            miles = input.nextInt();
+        }
+
+        input.close();
+    }
+}
+3.18 Credit Limit Calculator
+
+Question: Develop a Java application that calculates a customer's new balance and determines whether the customer's credit limit has been exceeded.
+
+Java Program
+Exercise 3.18 – Credit Limit Calculator
+import java.util.Scanner;
+
+public class CreditLimitCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int accountNumber;
+        int beginningBalance;
+        int totalCharges;
+        int totalCredits;
+        int creditLimit;
+        int newBalance;
+
+        System.out.print("Enter account number (-1 to quit): ");
+        accountNumber = input.nextInt();
+
+        while (accountNumber != -1) {
+            System.out.print("Enter beginning balance: ");
+            beginningBalance = input.nextInt();
+
+            System.out.print("Enter total charges: ");
+            totalCharges = input.nextInt();
+
+            System.out.print("Enter total credits: ");
+            totalCredits = input.nextInt();
+
+            System.out.print("Enter credit limit: ");
+            creditLimit = input.nextInt();
+
+            newBalance = beginningBalance + totalCharges - totalCredits;
+
+            System.out.println("Account number: " + accountNumber);
+            System.out.println("New balance: " + newBalance);
+
+            if (newBalance > creditLimit) {
+                System.out.println("Credit limit exceeded");
+            }
+
+            System.out.print("\nEnter account number (-1 to quit): ");
+            accountNumber = input.nextInt();
+        }
+
+        input.close();
+    }
+}
+3.19 Sales Commission Calculator
+
+Question: A salesperson receives a weekly base salary of $200 plus 9% of gross sales. Develop a program that calculates the salesperson's weekly earnings.
+
+The exercise mentions a list of items and their values, but those values were not included in your message. The following solution assumes the program accepts the value of each item sold directly.
+
+Java Program
+Exercise 3.19 – Sales Commission Calculator
+import java.util.Scanner;
+
+public class SalesCommissionCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double itemValue;
+        double totalSales = 0;
+        double earnings;
+
+        System.out.print("Enter item value (-1 to quit): ");
+        itemValue = input.nextDouble();
+
+        while (itemValue != -1) {
+            if (itemValue >= 0) {
+                totalSales += itemValue;
+            } else {
+                System.out.println("Enter a non-negative item value.");
+            }
+
+            System.out.print("Enter item value (-1 to quit): ");
+            itemValue = input.nextDouble();
+        }
+
+        earnings = 200 + (0.09 * totalSales);
+
+        System.out.printf("Total sales: $%.2f%n", totalSales);
+        System.out.printf("Weekly earnings: $%.2f%n", earnings);
+
+        input.close();
+    }
+}
+Explanation
+The program accepts the values of items sold.
+Enter -1 to indicate that there are no more items.
+It adds all item values to obtain total sales.
+It calculates earnings using:
+
+Weekly earnings = $200 + (9% × Total sales)
+
+Example: If total sales are $5,000:
+
+Earnings = $200 + (0.09 × $5,000)
+
+Earnings = $200 + $450
+
+Total earnings = $650
+
+3.20 Salary Calculator
+
+Question: Calculate the gross pay of three employees. Employees receive their normal hourly rate for the first 40 hours and 1.5 times their hourly rate for overtime.
+
+Java Program
+Exercise 3.20 – Salary Calculator
+import java.util.Scanner;
+
+public class SalaryCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        for (int employee = 1; employee <= 3; employee++) {
+            System.out.print("Enter hours worked by employee "
+                    + employee + ": ");
+            double hours = input.nextDouble();
+
+            System.out.print("Enter hourly rate: ");
+            double rate = input.nextDouble();
+
+            double grossPay;
+
+            if (hours <= 40) {
+                grossPay = hours * rate;
+            } else {
+                grossPay = (40 * rate)
+                        + ((hours - 40) * rate * 1.5);
+            }
+
+            System.out.printf("Employee %d gross pay: $%.2f%n",
+                    employee, grossPay);
+
+            System.out.println();
+        }
+
+        input.close();
+    }
+}
+Explanation
+
+The program processes three employees using a for loop.
+
+If the employee works 40 hours or less:
+
+Gross pay = Hours worked × Hourly rate
+
+If the employee works more than 40 hours:
+
+Gross pay = (40 × Hourly rate) + (Overtime hours × Hourly rate × 1.5)
+
+Example:
+
+If an employee works 45 hours at $10 per hour:
+
+Regular pay = 40 × $10 = $400
+Overtime pay = 5 × $10 × 1.5 = $75
+Gross pay = $475
+3.21 Find the Largest Number
+
+Question: Write pseudocode and a Java application that accepts 10 integers and determines the largest integer.
+
+A. Pseudocode
+START
+    SET counter = 1
+
+    INPUT number
+    SET largest = number
+
+    WHILE counter < 10
+        INPUT number
+
+        IF number > largest THEN
+            SET largest = number
+        END IF
+
+        INCREMENT counter
+    END WHILE
+
+    DISPLAY largest
+END
+B. Java Program
+Exercise 3.21 – Find the Largest Number
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        int counter = 1;
+        int number;
+        int largest;
+
+        System.out.print("Enter number 1: ");
+        largest = input.nextInt();
+
+        while (counter < 10) {
+            counter++;
+
+            System.out.print("Enter number " + counter + ": ");
+            number = input.nextInt();
+
+            if (number > largest) {
+                largest = number;
+            }
+        }
+
+        System.out.println("The largest number is: " + largest);
+
+        input.close();
+    }
+}
+

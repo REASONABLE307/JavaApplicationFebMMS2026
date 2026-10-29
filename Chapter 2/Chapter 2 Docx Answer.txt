@@ -59,11 +59,6 @@ e) Print "This is a Java program" on two lines using System.out.printf and two %
 
 System.out.printf("%s%n%s%n", "This is a Java", "program");
 
-Output:
-
-This is a Java
-program
-
 f) If variable number is not equal to 7, display the specified message.
 
 if (number != 7)
