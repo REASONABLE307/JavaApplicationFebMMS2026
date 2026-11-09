@@ -1,0 +1,49 @@
+d) Comparison
+Accessibility Heuristic
+
+Brute Force
+
+Uses accessibility numbers.
+
+Uses random moves.
+
+More careful algorithm design.
+
+Easier to implement.
+
+Requires less computer power.
+
+Requires more computer power.
+
+Does not guarantee a full tour.
+
+Does not guarantee a full tour within a fixed number of attempts.
+
+Usually produces better results.
+
+May produce short tours.
+
+
+c) Why Exhaustive Brute Force Is Not Appropriate for Knight's Tour
+The Knight's Tour problem has an enormous number of possible move sequences. Testing every possible sequence would require excessive processing time and computer resources.
+
+d) Comparison
+Random Brute Force
+
+Exhaustive Brute Force
+
+Uses random arrangements.
+
+Tests all possible arrangements.
+
+May find a solution quickly.
+
+Guarantees finding a solution if one exists.
+
+Does not guarantee success.
+
+Guarantees a solution after completing the search.
+
+May repeat arrangements.
+
+Systematically explores possibilities.

@@ -1,0 +1,24 @@
+d) Comparison
+Accessibility Heuristic
+
+Brute Force
+
+Uses accessibility numbers.
+
+Uses random moves.
+
+More careful algorithm design.
+
+Easier to implement.
+
+Requires less computer power.
+
+Requires more computer power.
+
+Does not guarantee a full tour.
+
+Does not guarantee a full tour within a fixed number of attempts.
+
+Usually produces better results.
+
+May produce short tours.

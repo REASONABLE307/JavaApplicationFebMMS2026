@@ -1,0 +1,78 @@
+
+Exercise 5.7 – Math Methods
+Determine the value of x after each statement.
+Part	Statement	Value of x
+a	Math.abs(7.5)	7.5
+b	Math.floor(7.5)	7.0
+c	Math.abs(0.0)	0.0
+d	Math.ceil(0.0)	0.0
+e	Math.abs(-6.4)	6.4
+f	Math.ceil(-6.4)	-6.0
+g	Math.ceil(-Math.abs(-8 + Math.floor(-5.5)))	-13.0
+
+Exercise 5.12 – Random Integers
+Use Math.random() to generate random integers.
+
+General formula:
+n = minimum + (int)(Math.random() * range);
+
+
+Solutions:
+// a) 1 <= n <= 2
+n = 1 + (int)(Math.random() * 2);
+
+// b) 1 <= n <= 100
+n = 1 + (int)(Math.random() * 100);
+
+// c) 0 <= n <= 9
+n = (int)(Math.random() * 10);
+
+// d) 1000 <= n <= 1112
+n = 1000 + (int)(Math.random() * 113);
+
+// e) -1 <= n <= 1
+n = -1 + (int)(Math.random() * 3);
+
+// f) -3 <= n <= 11
+n = -3 + (int)(Math.random() * 15);
+
+
+Exercise 5.13 – Random Numbers from Sets
+// a) 2, 4, 6, 8, 10
+System.out.println(2 + 2 * (int)(Math.random() * 5));
+
+// b) 3, 5, 7, 9, 11
+System.out.println(3 + 2 * (int)(Math.random() * 5));
+
+// c) 6, 10, 14, 18, 22
+System.out.println(6 + 4 * (int)(Math.random() * 5));
+
+
+Important Java concepts covered
+Concept	Exercises
+Math class methods	5.7, 5.9, 5.10, 5.15, 5.20, 5.23
+Random numbers	5.12, 5.13
+User-defined methods	5.8, 5.14–5.24
+Boolean methods	5.16, 5.17, 5.24
+Loops	5.8, 5.14, 5.18, 5.19, 5.21, 5.24
+Scanner input	Most exercises
+
+Study tip: Pay particular attention to how methods receive arguments, return values, and how static methods are called from main(). These are the central ideas in this chapter.
+
+
+5.39 – Computer-Assisted Instruction: Varying the Types of Problems
+This is the final exercise. It allows the student to choose the type of arithmetic problem.
+Option	Arithmetic operation
+1	Addition
+2	Subtraction
+3	Multiplication
+4	Division
+5	Random mixture
+
+Important things to understand before your examination
+Pay special attention to these five concepts:
+1. Methods: How to create methods, pass arguments and return values.
+2. Loops: How for, while and do-while work.
+3. Random numbers: How Random and SecureRandom generate random values.
+4. Boolean methods: How methods return true or false.
+5. Switch statements: How to select between multiple operations.
