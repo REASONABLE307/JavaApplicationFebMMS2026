@@ -1,0 +1,17 @@
+import java.time.LocalTime;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class UsingDateTimeFormatter{
+	public static void main(String[] args){
+		LocalDate partyDate = LocalDate.parse("2026-10-18");
+		LocalTime partyTime = LocalTime.of(13,30,30);
+		
+		DateTimeFormatter myFormat = DateTimeFormatter.ofPattern("dd-MM-YYYY");
+		DateTimeFormatter formatTime = DateTimeFormatter.ofPattern("hh:mm:ss a");
+		
+		System.out.println(partyDate.format(myFormat));
+		System.out.println(partyDate.format(formatTime));
+	}
+}
